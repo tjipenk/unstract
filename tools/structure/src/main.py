@@ -251,7 +251,9 @@ class StructureTool(BaseTool):
             # Update the dictionary with modified metadata
             structured_output_dict[SettingsKeys.METADATA] = metadata
             structured_output = json.dumps(structured_output_dict)
-
+        print("****************************")
+        print(structured_output_dict)
+        print("****************************")
         metrics = structured_output_dict[SettingsKeys.METRICS]
         new_metrics = {}
         if tool_settings[SettingsKeys.ENABLE_SINGLE_PASS_EXTRACTION]:
